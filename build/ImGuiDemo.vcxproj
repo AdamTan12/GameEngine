@@ -375,6 +375,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\imgui_tables.cpp" />
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\backends\imgui_impl_glfw.cpp" />
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Component.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Transform.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Assets\Mesh.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Objects\GameObject.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

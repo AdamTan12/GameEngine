@@ -22,6 +22,18 @@
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Assets\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Objects\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\unoAd\Documents\2dGameEngine\CMakeLists.txt" />
