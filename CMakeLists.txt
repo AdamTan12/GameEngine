@@ -3,6 +3,27 @@ project(ImGuiDemo)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# -------------------------------
+# component files
+# -------------------------------
+set(COMPONENT_SRC
+    src/Components/Component.cpp
+    src/Components/Transform.cpp
+)
+
+# -------------------------------
+# object files
+# -------------------------------
+set(OBJECT_SRC
+    src/Objects/GameObject.cpp
+)
+# -------------------------------
+# assets files
+# -------------------------------
+set(ASSET_SRC
+    src/Assets/Mesh.cpp
+)
+
 
 # -------------------------------
 # ImGui sources
@@ -25,6 +46,13 @@ include_directories(imgui imgui/backends)
 set(GLFW_INCLUDE "C:/glfw-3.4-win/include")
 set(GLFW_LIB "C:/glfw-3.4-win/lib-vc2022/glfw3.lib")
 
+# -------------------------------
+# GLM paths
+# -------------------------------
+set(GLFW_INCLUDE "C:/glfw-3.4-win/include")
+set(GLFW_LIB "C:/glfw-3.4-win/lib-vc2022/glfw3.lib")
+
+
 include_directories(${GLFW_INCLUDE})
 
 # -------------------------------
@@ -33,6 +61,10 @@ include_directories(${GLFW_INCLUDE})
 add_executable(ImGuiDemo
     imgui_demo/main.cpp
     ${IMGUI_SRC}
+    ${COMPONENT_SRC}
+    ${ASSET_SRC}
+    ${OBJECT_SRC}
+    
 )
 
 # Link GLFW and OpenGL

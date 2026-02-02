@@ -9,6 +9,7 @@ struct GameObject {
     private:
         vector<Component*> components;
     public:
+        GameObject* parent = nullptr;
         Transform* transform = nullptr;
         GameObject();
         ~GameObject();

@@ -3,7 +3,7 @@
 #include "Component.h"
 #include "glm/glm.hpp"
 
-struct Transform : Component {
+struct Transform : public Component {
     glm::vec2 position;
     Transform();
     Transform(GameObject*);
