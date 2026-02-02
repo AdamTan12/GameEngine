@@ -1,7 +1,8 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
-#include "Transform.h"
-#include "../Objects/GameObject.h"
+
+struct GameObject;
+struct Transform;
 /**
  * base class for everything that is attached to a gameObject
  * defines behaviour that gameObejct can perform

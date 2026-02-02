@@ -1,4 +1,5 @@
 #include "GameObject.h"
+#include "../Components/Transform.h"
 
 GameObject::GameObject() {
     transform = new Transform(this);

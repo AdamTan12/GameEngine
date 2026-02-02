@@ -3,71 +3,89 @@ project(ImGuiDemo)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # -------------------------------
-# component files
+# Engine source files
 # -------------------------------
 set(COMPONENT_SRC
     src/Components/Component.cpp
     src/Components/Transform.cpp
 )
 
-# -------------------------------
-# object files
-# -------------------------------
 set(OBJECT_SRC
     src/Objects/GameObject.cpp
 )
-# -------------------------------
-# assets files
-# -------------------------------
+
 set(ASSET_SRC
     src/Assets/Mesh.cpp
 )
-
 
 # -------------------------------
 # ImGui sources
 # -------------------------------
 set(IMGUI_SRC
-    imgui/imgui.cpp
-    imgui/imgui_draw.cpp
-    imgui/imgui_widgets.cpp
-    imgui/imgui_tables.cpp
-    imgui/backends/imgui_impl_glfw.cpp
-    imgui/backends/imgui_impl_opengl3.cpp
+    external/imgui/imgui.cpp
+    external/imgui/imgui_draw.cpp
+    external/imgui/imgui_widgets.cpp
+    external/imgui/imgui_tables.cpp
+    external/imgui/backends/imgui_impl_glfw.cpp
+    external/imgui/backends/imgui_impl_opengl3.cpp
 )
 
-# Include ImGui headers
-include_directories(imgui imgui/backends)
+# -------------------------------
+# GLAD
+# -------------------------------
+set(GLAD_SRC
+    external/glad/src/glad.c
+)
+set(GLAD_INCLUDE
+    external/glad/include
+)
 
 # -------------------------------
-# GLFW paths
+# GLFW
 # -------------------------------
-set(GLFW_INCLUDE "C:/glfw-3.4-win/include")
-set(GLFW_LIB "C:/glfw-3.4-win/lib-vc2022/glfw3.lib")
+set(GLFW_INCLUDE
+    external/glfw-3.4-win/include
+)
+set(GLFW_LIB
+    ../external/glfw-3.4-win/lib-vc2022/glfw3
+)
 
 # -------------------------------
-# GLM paths
+# GLM
 # -------------------------------
-set(GLFW_INCLUDE "C:/glfw-3.4-win/include")
-set(GLFW_LIB "C:/glfw-3.4-win/lib-vc2022/glfw3.lib")
+set(GLM_INCLUDE
+    external/glm-1.0.1
+)
 
-
-include_directories(${GLFW_INCLUDE})
+# -------------------------------
+# Include directories
+# -------------------------------
+include_directories(
+    src
+    external/imgui
+    external/imgui/backends
+    ${GLAD_INCLUDE}
+    ${GLFW_INCLUDE}
+    ${GLM_INCLUDE}
+)
 
 # -------------------------------
 # Build executable
 # -------------------------------
 add_executable(ImGuiDemo
     imgui_demo/main.cpp
-    ${IMGUI_SRC}
     ${COMPONENT_SRC}
-    ${ASSET_SRC}
     ${OBJECT_SRC}
-    
+    ${ASSET_SRC}
+    ${IMGUI_SRC}
+    ${GLAD_SRC}
 )
 
-# Link GLFW and OpenGL
+# -------------------------------
+# Link libraries
+# -------------------------------
 target_link_libraries(ImGuiDemo
     "${GLFW_LIB}"
     opengl32

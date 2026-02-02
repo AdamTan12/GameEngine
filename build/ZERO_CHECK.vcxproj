@@ -69,7 +69,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -89,7 +89,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>

@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -112,10 +112,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -123,7 +123,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\glfw-3.4-win\lib-vc2022\glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>../external/glfw-3.4-win/lib-vc2022/glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -142,7 +142,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -169,10 +169,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,7 +180,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\glfw-3.4-win\lib-vc2022\glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>../external/glfw-3.4-win/lib-vc2022/glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -226,10 +226,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -237,7 +237,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\glfw-3.4-win\lib-vc2022\glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>../external/glfw-3.4-win/lib-vc2022/glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -256,7 +256,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -282,10 +282,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\imgui;C:\Users\unoAd\Documents\2dGameEngine\imgui\backends;C:\glfw-3.4-win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\unoAd\Documents\2dGameEngine\src;C:\Users\unoAd\Documents\2dGameEngine\external\imgui;C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends;C:\Users\unoAd\Documents\2dGameEngine\external\glad\include;C:\Users\unoAd\Documents\2dGameEngine\external\glfw-3.4-win\include;C:\Users\unoAd\Documents\2dGameEngine\external\glm-1.0.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -293,7 +293,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\glfw-3.4-win\lib-vc2022\glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>../external/glfw-3.4-win/lib-vc2022/glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -369,16 +369,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui_demo\main.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\imgui.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\imgui_draw.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\imgui_tables.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\backends\imgui_impl_glfw.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui\backends\imgui_impl_opengl3.cpp" />
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Component.cpp" />
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Transform.cpp" />
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Assets\Mesh.cpp" />
     <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Objects\GameObject.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Assets\Mesh.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui_tables.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\glad\src\glad.c" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
