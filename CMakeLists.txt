@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(COMPONENT_SRC
     src/Components/Component.cpp
     src/Components/Transform.cpp
+    src/Components/Renderers/MeshRenderer.cpp
 )
 
 set(OBJECT_SRC
@@ -18,6 +19,10 @@ set(OBJECT_SRC
 
 set(ASSET_SRC
     src/Assets/Mesh.cpp
+)
+
+set(SCENE_SRC
+    src/Scenes/Scene.cpp
 )
 
 # -------------------------------
@@ -76,9 +81,11 @@ include_directories(
 # -------------------------------
 add_executable(ImGuiDemo
     imgui_demo/main.cpp
+    #main.cpp
     ${COMPONENT_SRC}
     ${OBJECT_SRC}
     ${ASSET_SRC}
+    ${SCENE_SRC}
     ${IMGUI_SRC}
     ${GLAD_SRC}
 )

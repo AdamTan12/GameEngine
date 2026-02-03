@@ -5,12 +5,15 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp> 
 #include <glm/gtc/type_ptr.hpp>
-#include "../Assets/Mesh.h"
-#include "Component.h"
+#include "../../Assets/Mesh.h"
+#include "../../Objects/GameObject.h"   
+#include "../Transform.h"
+#include "../Component.h"
+#include "../../Scenes/Scene.h"
 
 using namespace std;
 
-class Object; //forward declaration
+class GameObject; //forward declaration
 /**
  * @brief Inherits from Component.
  * 
@@ -40,7 +43,8 @@ struct MeshRenderer : public Component {
      * 
      * @param gameObject Object this MeshRenderer is attached to.
      */
-    MeshRenderer(Object* gameObject);
+    MeshRenderer(GameObject* gameObject);
+    ~MeshRenderer();
     /**
      * @brief Renders the mesh that *mesh points to.
      * @param shader The shader that is used for rendering.
