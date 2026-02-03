@@ -89,7 +89,7 @@ int main() {
     // ---------------- ImGui ----------------
     e->init(window);
     // ---------------- Shader ----------------
-    GLuint shaderProgram = createShaderProgram("../shaders/vertex.glsl", "../shaders/fragment.glsl");
+    GLuint shaderProgram = createShaderProgram("shaders/vertex.glsl", "shaders/fragment.glsl");
 
     // ---------------- Scene -----------------
     Scene* scene = new Scene();
