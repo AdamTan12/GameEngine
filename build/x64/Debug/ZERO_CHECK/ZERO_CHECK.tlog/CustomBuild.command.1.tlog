@@ -1,6 +1,6 @@
-^C:\USERS\UNOAD\DOCUMENTS\2DGAMEENGINE\BUILD\CMAKEFILES\F2A6B7E4714973C5E54BED891209F2DC\GENERATE.STAMP.RULE
+^C:\USERS\ADAMT\DOCUMENTS\GAMEENGINE\BUILD\CMAKEFILES\C28F7CAF86DC94C3B5F4926EA6384E7F\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/unoAd/Documents/2dGameEngine -BC:/Users/unoAd/Documents/2dGameEngine/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/unoAd/Documents/2dGameEngine/build/ImGuiDemo.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/adamt/Documents/GameEngine -BC:/Users/adamt/Documents/GameEngine/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/adamt/Documents/GameEngine/build/ImGuiDemo.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

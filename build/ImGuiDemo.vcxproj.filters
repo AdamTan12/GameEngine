@@ -1,55 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\imgui_demo\main.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\imgui_demo\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Component.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\src\Components\Component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Transform.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\src\Components\Transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Components\Renderers\MeshRenderer.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\src\Components\Renderers\MeshRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Objects\GameObject.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\src\Objects\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Assets\Mesh.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\src\Assets\Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\src\Scenes\Scene.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\src\Scenes\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui_draw.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\imgui\imgui_draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui_widgets.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\imgui_tables.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\imgui\imgui_tables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends\imgui_impl_glfw.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\imgui\backends\imgui_impl_glfw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\imgui\backends\imgui_impl_opengl3.cpp">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\unoAd\Documents\2dGameEngine\external\glad\src\glad.c">
+    <ClCompile Include="C:\Users\adamt\Documents\GameEngine\external\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\unoAd\Documents\2dGameEngine\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\adamt\Documents\GameEngine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{BC12621B-49C8-34A9-98D2-61C471FDA2D8}</UniqueIdentifier>
+      <UniqueIdentifier>{E3990704-7BA3-3BE4-BF25-883E72353CC4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
