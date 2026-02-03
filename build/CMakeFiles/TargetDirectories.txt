@@ -1,3 +1,0 @@
-C:/Users/adamt/Documents/GameEngine/build/CMakeFiles/ImGuiDemo.dir
-C:/Users/adamt/Documents/GameEngine/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/adamt/Documents/GameEngine/build/CMakeFiles/ZERO_CHECK.dir
