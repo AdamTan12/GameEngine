@@ -28,9 +28,9 @@ glm::mat4 Transform::getWorldMatrix() {
                     * glm::scale(glm::mat4(1.0f), scale);
     GameObject* parent = gameObject->parent;
     while(parent != nullptr) {
-        glm::mat4 parentMatrix = glm::translate(glm::mat4(1.0f), parent->transform.position)
-                    * glm::mat4_cast(parent->transform.rotation)
-                    * glm::scale(glm::mat4(1.0f), parent->transform.scale);
+        glm::mat4 parentMatrix = glm::translate(glm::mat4(1.0f), parent->transform->position)
+                    * glm::mat4_cast(parent->transform->rotation)
+                    * glm::scale(glm::mat4(1.0f), parent->transform->scale);
         local = parentMatrix * local;
         parent = parent->parent;
     }

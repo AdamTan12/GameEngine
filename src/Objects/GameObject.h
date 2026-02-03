@@ -1,6 +1,7 @@
 #ifndef GAMEOBJECT_H
 #define GAMEOBJECT_H
 #include <vector>
+#include <string>
 #include "../Components/Component.h"
 #include "../Components/Transform.h"
 #include "../Scenes/Scene.h"
@@ -11,8 +12,9 @@ struct GameObject {
     private:
         vector<Component*> components;
     public:
+        string name = "";
         GameObject* parent = nullptr;
-        Transform transform;
+        Transform* transform;
         GameObject();
         ~GameObject();
         template<typename T>

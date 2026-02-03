@@ -24,17 +24,20 @@ set(ASSET_SRC
 set(SCENE_SRC
     src/Scenes/Scene.cpp
 )
+set (EDITOR_SRC
+    editor_imgui/editor.cpp    
+)
 
 # -------------------------------
 # ImGui sources
 # -------------------------------
 set(IMGUI_SRC
-    external/imgui/imgui.cpp
-    external/imgui/imgui_draw.cpp
-    external/imgui/imgui_widgets.cpp
-    external/imgui/imgui_tables.cpp
-    external/imgui/backends/imgui_impl_glfw.cpp
-    external/imgui/backends/imgui_impl_opengl3.cpp
+    external/imgui-docking/imgui.cpp
+    external/imgui-docking/imgui_draw.cpp
+    external/imgui-docking/imgui_widgets.cpp
+    external/imgui-docking/imgui_tables.cpp
+    external/imgui-docking/backends/imgui_impl_glfw.cpp
+    external/imgui-docking/backends/imgui_impl_opengl3.cpp
 )
 
 # -------------------------------
@@ -69,8 +72,8 @@ set(GLM_INCLUDE
 # -------------------------------
 include_directories(
     src
-    external/imgui
-    external/imgui/backends
+    external/imgui-docking
+    external/imgui-docking/backends
     ${GLAD_INCLUDE}
     ${GLFW_INCLUDE}
     ${GLM_INCLUDE}
@@ -86,6 +89,7 @@ add_executable(ImGuiDemo
     ${OBJECT_SRC}
     ${ASSET_SRC}
     ${SCENE_SRC}
+    ${EDITOR_SRC}
     ${IMGUI_SRC}
     ${GLAD_SRC}
 )

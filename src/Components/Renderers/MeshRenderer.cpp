@@ -2,7 +2,7 @@
 #include <iostream>
 
 MeshRenderer::MeshRenderer() : mesh(nullptr), VAO(0), VBO(0), EBO(0) {}
-MeshRenderer::MeshRenderer(GameObject *p) : Component(p, &p->transform), mesh(nullptr), VAO(0), VBO(0), EBO(0) {
+MeshRenderer::MeshRenderer(GameObject *p) : Component(p, p->transform), mesh(nullptr), VAO(0), VBO(0), EBO(0) {
     if (Scene::activeScene != nullptr)
         Scene::activeScene->renderers.push_back(this);
 }

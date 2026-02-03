@@ -1,6 +1,6 @@
-#include "../imgui/imgui.h"
-#include "../imgui/backends/imgui_impl_glfw.h"
-#include "../imgui/backends/imgui_impl_opengl3.h"
+#include "../imgui-docking/imgui.h"
+#include "../imgui-docking/backends/imgui_impl_glfw.h"
+#include "../imgui-docking/backends/imgui_impl_opengl3.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -15,6 +15,7 @@
 #include "Components/Renderers/MeshRenderer.h"
 #include "Assets/Mesh.h"
 #include "Scenes/Scene.h"
+#include "../editor_imgui/Editor.h"
 
 // Shader loading helper functions
 std::string loadShaderSource(const std::string& path) {
@@ -84,17 +85,9 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
 
-    // Wireframe toggle
-    bool wireframe = false;
-
+    Editor* e = new Editor();
     // ---------------- ImGui ----------------
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    ImGui::StyleColorsDark();
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
-
+    e->init(window);
     // ---------------- Shader ----------------
     GLuint shaderProgram = createShaderProgram("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
@@ -113,57 +106,23 @@ int main() {
         glfwPollEvents();
 
         // Start ImGui frame
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        // ImGui controls
-        ImGui::Begin("Settings");
-        if (ImGui::Checkbox("Wireframe Mode", &wireframe)) {
-            glPolygonMode(GL_FRONT_AND_BACK, wireframe ? GL_LINE : GL_FILL);
-        }
-        ImGui::End();
-
-        ImGui::SetNextWindowPos(ImVec2(300, 10));
-        ImGui::Begin("Objects");
-        if (ImGui::Button("Create GameObject")) {
-            // This code runs only when the button is clicked
-            GameObject* obj = new GameObject();
-            obj->transform.position = glm::vec3(x, 0, 0);
-            MeshRenderer* renderer2 = obj->AddComponent<MeshRenderer>();
-            Mesh* mesh = new Mesh();
-            renderer2->setMesh(mesh);
-            x += 1;
-        }
-        for (GameObject* go : Scene::activeScene->objects) {
-            ImGui::Text("GameObject");
-        }
-        ImGui::End();
-
+        e->startFrame();
+        e->hierarchy();
+        e->details();
         // Clear buffers
         glClearColor(0.1f,0.1f,0.1f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // Draw mesh
-        glUseProgram(shaderProgram);
-        GLint viewLoc = glGetUniformLocation(shaderProgram, "u_view");
-        GLint projLoc = glGetUniformLocation(shaderProgram, "u_perspective");
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
-        //renderer->Draw(shaderProgram);
-        scene->updateRenderers(shaderProgram);
+        e->game(shaderProgram, view, projection);
         // Render ImGui on top
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
+        e->render();
+        
         glfwSwapBuffers(window);
     }
 
     // ---------------- Cleanup ----------------
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
+    e->shutdown();
+
     glfwDestroyWindow(window);
     glfwTerminate();
 

@@ -1,7 +1,8 @@
 #include "GameObject.h"
 
 GameObject::GameObject() {
-    transform = Transform(this);
+    transform = new Transform(this);
+    name = "GameObject " + std::to_string(Scene::activeScene->objects.size());
     if (Scene::activeScene != nullptr)
         Scene::activeScene->addObject(this);
 }
