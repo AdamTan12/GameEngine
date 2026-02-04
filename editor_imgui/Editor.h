@@ -1,5 +1,7 @@
 #ifndef EDITOR_H
 #define EDITOR_H
+#include <unordered_map>
+#include <string>
 #include "../external/imgui-docking/imgui.h"
 #include "../external/imgui-docking/backends/imgui_impl_opengl3.h"
 #include "../external/imgui-docking/backends/imgui_impl_glfw.h"
@@ -17,12 +19,16 @@ class Editor {
         GLuint texture_id; // color attachment texture
         const unsigned int WIDTH = 800;
         const unsigned int HEIGHT = 600;
-        
+
+        unordered_map<string, void(*)(GameObject*)> buttonToComponent;
+        bool showMap = false;
+
         void create_framebuffer();
         void bind_framebuffer();
         void unbind_framebuffer();
         void rescale_framebuffer(float, float);
     public:
+        Editor();
         // imgui set up
         void init(GLFWwindow *);
         void startFrame();
@@ -31,6 +37,7 @@ class Editor {
 
         void hierarchy();
         void details();
+        void addComponent();
         void game(GLuint, glm::mat4, glm::mat4);
         void transform(Transform* transform);
 };

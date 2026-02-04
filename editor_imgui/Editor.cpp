@@ -1,5 +1,14 @@
 #include "editor.h"
+//forward dec
+void addMeshRenderer(GameObject* currGameObject);
 
+Editor::Editor() {
+    buttonToComponent["MeshRenderer"] = addMeshRenderer;
+}
+void addMeshRenderer(GameObject* currGameObject) {
+    Mesh* mesh = new Mesh();
+    currGameObject->AddComponent<MeshRenderer>()->setMesh(mesh);
+}
 void Editor::init(GLFWwindow * window) {
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -32,7 +41,7 @@ void Editor::hierarchy() {
     if (ImGui::BeginPopupContextWindow()) {
         if (ImGui::MenuItem("Add New GameObject")) {
             GameObject* go = new GameObject();
-            go->AddComponent<MeshRenderer>()->setMesh(new Mesh());
+            //go->AddComponent<MeshRenderer>()->setMesh(new Mesh());
         }
         ImGui::EndPopup();
     }
@@ -46,20 +55,23 @@ void Editor::hierarchy() {
 }
 void Editor::details() {
     ImGui::Begin("Details");
-    if (currGameObject == nullptr) {}
-    else {
-        // name
-        char name[128];
-        strcpy(name, currGameObject->name.c_str());
-        name[sizeof(name) - 1] = '\0';
-        ImGui::Text("Name");
-        ImGui::SameLine();
-        if (ImGui::InputText("##name", name, sizeof(name))) {
-            currGameObject->name = name;
-        }
-        //display transform
-        transform(currGameObject->transform);
+    if (currGameObject == nullptr) {
+        ImGui::End();
+        return;
     }
+
+    // name
+    char name[128];
+    strcpy(name, currGameObject->name.c_str());
+    name[sizeof(name) - 1] = '\0';
+    ImGui::Text("Name");
+    ImGui::SameLine();
+    if (ImGui::InputText("##transform", name, sizeof(name))) {
+        currGameObject->name = name;
+    }
+    //display transform
+    transform(currGameObject->transform);
+    addComponent();
     ImGui::End();
 }
 void Editor::game(GLuint shaderProgram, glm::mat4 view, glm::mat4 projection) {
@@ -112,6 +124,22 @@ void Editor::transform(Transform* transform) {
         ImGui::PopItemWidth();
     }
 }
+void Editor::addComponent() {
+    if (ImGui::Button("Add Component")) {
+        showMap = !showMap;
+    }
+    if (showMap) {
+        ImGui::BeginChild("Components");
+        for (const auto& pair : buttonToComponent) {
+            if (ImGui::Button(pair.first.c_str())) {
+                buttonToComponent[pair.first](currGameObject);
+            }
+        }
+        ImGui::EndChild();
+    }
+}
+
+
 void Editor::create_framebuffer()
 {
 	glGenFramebuffers(1, &FBO);
