@@ -25,7 +25,10 @@ set(SCENE_SRC
     src/Scenes/Scene.cpp
 )
 set (EDITOR_SRC
-    editor_imgui/editor.cpp    
+    editor_imgui/editor.cpp
+    editor_imgui/Details/Details.cpp
+    editor_imgui/Hierarchy/Hierarchy.cpp
+    editor_imgui/GameWindow/GameWindow.cpp        
 )
 
 # -------------------------------

@@ -107,13 +107,12 @@ int main() {
 
         // Start ImGui frame
         e->startFrame();
-        e->hierarchy();
-        e->details();
+
         // Clear buffers
         glClearColor(0.1f,0.1f,0.1f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        e->game(shaderProgram, view, projection);
+        e->display(shaderProgram, view, projection);
         // Render ImGui on top
         e->render();
         
