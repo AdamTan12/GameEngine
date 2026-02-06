@@ -10,3 +10,6 @@ GameObject::~GameObject() {
     parent = nullptr;
     components.clear();
 }
+vector<Component*> GameObject::allComponents() {
+    return components;
+}

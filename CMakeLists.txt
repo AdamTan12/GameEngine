@@ -19,6 +19,7 @@ set(OBJECT_SRC
 
 set(ASSET_SRC
     src/Assets/Mesh.cpp
+    src/Assets/Assets.cpp
 )
 
 set(SCENE_SRC
@@ -28,7 +29,8 @@ set (EDITOR_SRC
     editor_imgui/editor.cpp
     editor_imgui/Details/Details.cpp
     editor_imgui/Hierarchy/Hierarchy.cpp
-    editor_imgui/GameWindow/GameWindow.cpp        
+    editor_imgui/GameWindow/GameWindow.cpp
+    editor_imgui/Project/Project.cpp           
 )
 
 # -------------------------------

@@ -29,7 +29,7 @@ struct MeshRenderer : public Component {
     /**
      * @brief Pointer to the mesh to draw.
      */
-    Mesh *mesh = nullptr;
+    Mesh* mesh = nullptr;
     /**
      * @brief Default constructor.
      */
@@ -55,5 +55,6 @@ struct MeshRenderer : public Component {
      * @param mesh The mesh to render.
      */
     void setMesh(Mesh *mesh);
+    void displayComponent() override;
 };
 #endif

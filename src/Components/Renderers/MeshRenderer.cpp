@@ -33,8 +33,6 @@ void MeshRenderer::setMesh(Mesh *mesh) {
     glEnableVertexAttribArray(0);
 }
 void MeshRenderer::Draw(GLuint shaderProgram) {
-    if (mesh == nullptr)
-        std::cout << "null" << endl;
     if (mesh != nullptr) {
         // u_model
         // glm::mat4 model = glm::mat4_cast(transform->rotation);
@@ -50,5 +48,29 @@ void MeshRenderer::Draw(GLuint shaderProgram) {
                GL_UNSIGNED_INT,               // type of index
                0); 
 
+    }
+}
+void MeshRenderer::displayComponent() {
+    if (ImGui::CollapsingHeader("Mesh Renderer", ImGuiTreeNodeFlags_DefaultOpen)) {
+        
+        ImGui::Text("Mesh");
+        ImGui::SameLine();
+        string meshName = "meshymeshy";
+        if (mesh == nullptr)
+            meshName = "Empty";
+        ImGui::Button(meshName.c_str());
+
+        if (mesh != nullptr && ImGui::BeginDragDropSource()) {
+            ImGui::SetDragDropPayload("Mesh", mesh, sizeof(mesh));
+            ImGui::Text("MESH");
+            ImGui::EndDragDropSource();
+        }
+        if (ImGui::BeginDragDropTarget()) {
+            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("Mesh")) {
+                Mesh* castedMesh = *(Mesh**)payload->Data;
+                setMesh(castedMesh);
+            }
+            ImGui::EndDragDropTarget();
+        }
     }
 }

@@ -14,6 +14,7 @@ struct Transform : public Component {
     ~Transform();
 
     glm::mat4 getWorldMatrix();
+    void displayComponent() override;
 };
 
 #endif

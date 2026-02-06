@@ -17,8 +17,8 @@ struct GameObject {
         Transform* transform;
         GameObject();
         ~GameObject();
-        template<typename T>
-
+        vector<Component*> allComponents();
+    template<typename T>
     T* AddComponent() {
         static_assert(std::is_base_of<Component, T>::value, "AddComponent<T>: T must inherit from Component");
         T* component = new T(this);

@@ -11,3 +11,6 @@ Component::~Component() {
     gameObject = nullptr;
     transform = nullptr;
 }
+void Component::displayComponent() {
+    
+}

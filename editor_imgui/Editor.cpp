@@ -4,11 +4,13 @@ Editor::Editor() {
     hier = Hierarchy();
     details = Details();
     gameWindow = GameWindow();
+    project = Project();
 }
 void Editor::display(GLuint shaderProgram, glm::mat4 view, glm::mat4 projection) {
     hier.window();
     details.window(hier.getSelectedGameObject());
     gameWindow.window(shaderProgram, view, projection);
+    project.window();
 }
 
 void Editor::init(GLFWwindow * window) {

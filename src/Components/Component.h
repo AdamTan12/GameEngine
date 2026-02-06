@@ -1,6 +1,8 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
-
+#include "../../external/imgui-docking/imgui.h"
+#include "../../external/imgui-docking/backends/imgui_impl_opengl3.h"
+#include "../../external/imgui-docking/backends/imgui_impl_glfw.h"
 struct GameObject;
 struct Transform;
 /**
@@ -17,7 +19,7 @@ struct Component {
     Component();
     Component(GameObject*, Transform*);
     virtual ~Component();
-
+    virtual void displayComponent();
 };
 
 #endif

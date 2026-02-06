@@ -9,6 +9,7 @@
 #include "Details/Details.h"
 #include "GameWindow/GameWindow.h"
 #include "Hierarchy/Hierarchy.h"
+#include "Project/Project.h"
 
 using namespace std;
 class Editor {
@@ -17,6 +18,7 @@ class Editor {
         Details details;
         GameWindow gameWindow;
         Hierarchy hier;
+        Project project;
         // imgui set up
         void init(GLFWwindow *);
         void startFrame();

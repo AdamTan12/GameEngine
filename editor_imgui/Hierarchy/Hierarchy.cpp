@@ -5,7 +5,6 @@ void Hierarchy::window() {
     if (ImGui::BeginPopupContextWindow()) {
         if (ImGui::MenuItem("Add New GameObject")) {
             GameObject* go = new GameObject();
-            //go->AddComponent<MeshRenderer>()->setMesh(new Mesh());
         }
         ImGui::EndPopup();
     }
